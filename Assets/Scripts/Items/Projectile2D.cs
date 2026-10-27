@@ -96,10 +96,7 @@ public class Projectile2D : MonoBehaviour
         }
 
         Vector2 start = transform.position;
-        if(direction == Vector2.zero)
-        {
-            direction = transform.right.normalized;//TODO : debug temp, remove later
-        }
+        direction = transform.up;
         Vector2 end = start + direction * speed * Time.deltaTime;
 
         ProcessSegment(start, end);
