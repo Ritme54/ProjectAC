@@ -5,9 +5,20 @@ public class Socket : MonoBehaviour
 {
     Transform socket;
 
+    private void Start()
+    {
+        socket = GetComponent<Transform>();
+    }
+
     private void Equipment(GameObject _weapon)//Drag weapon, and equip
     {
-        GameObject curWeapon = Instantiate(_weapon, socket.transform);
+        if (socket.childCount > 0)
+        {
+            Debug.Log("Already equip a weapon.");
+            return;
+        }
+
+        GameObject curWeapon = Instantiate(_weapon, socket);
 
         curWeapon.transform.localPosition = Vector2.zero;
         curWeapon.transform.localRotation = Quaternion.identity;

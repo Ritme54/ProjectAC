@@ -482,6 +482,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd733c66574f38740afc6efbce04e280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputController
+  moveType: 2
+  limitWeightMaxSpeed: 0
+  normalMaxSpeed: 0
+  stopFric: 0.8
 --- !u!114 &802505714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,8 +590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 902306153}
-  - component: {fileID: 902306155}
-  - component: {fileID: 902306156}
+  - component: {fileID: 902306154}
   m_Layer: 0
   m_Name: FCS
   m_TagString: Untagged
@@ -610,19 +613,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 802505712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &902306155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902306152}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e47a25e42e255243aa75d8eedbb22fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FCS
---- !u!114 &902306156
+--- !u!114 &902306154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -631,19 +622,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 902306152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab476ffc35e72f849b8745978d133b1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e47a25e42e255243aa75d8eedbb22fa, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TargetingAndUpperBodyRotation
-  playerTransform: {fileID: 0}
-  upperBodyTransform: {fileID: 0}
-  fanRadius: 5
-  fanAngle: 90
-  circleRadius: 8
-  rotationSpeed: 15
-  angleOffset: -90
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  m_EditorClassIdentifier: Assembly-CSharp::FCS
 --- !u!1 &1080165294
 GameObject:
   m_ObjectHideFlags: 0
